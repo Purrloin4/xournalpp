@@ -71,6 +71,7 @@ private:
     static void switchSelectTypeCb(GtkButton* button, PdfFloatingToolbox* pft);
     static void strikethroughCb(GtkButton* button, PdfFloatingToolbox* pft);
     static void underlineCb(GtkButton* button, PdfFloatingToolbox* pft);
+    static void copyKeyCb(GtkButton* button, PdfFloatingToolbox* pft);
     static void copyTextCb(GtkButton* button, PdfFloatingToolbox* pft);
     static void highlightCb(GtkButton* button, PdfFloatingToolbox* pft);
 

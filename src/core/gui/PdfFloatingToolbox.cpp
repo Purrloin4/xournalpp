@@ -116,6 +116,14 @@ void PdfFloatingToolbox::highlightCb(GtkButton* button, PdfFloatingToolbox* pft)
     pft->userCancelSelection();
 }
 
+//if "ctrl + c" is pressed, copy the selected text to the clipboard
+void PdfFloatingToolbox::copyKeyCb(GtkWidget* widget, GdkEventKey* event, PdfFloatingToolbox* pft) {
+    if (event->keyval == GDK_KEY_c && (event->state & GDK_CONTROL_MASK)) {
+        pft->copyTextToClipboard();
+        pft->userCancelSelection();
+    }
+}
+
 void PdfFloatingToolbox::copyTextCb(GtkButton* button, PdfFloatingToolbox* pft) {
     pft->copyTextToClipboard();
     pft->userCancelSelection();
